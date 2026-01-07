@@ -1,19 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import MyComponent from "./components/MyComponent.tsx";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+        <MyComponent title={'title 1'}>
+            Lorem ipsum dolor sit amet.
+        </MyComponent>
 
-      <h1>
-          Vite + React
-      </h1>
+        <MyComponent title={'title 2'}/>
+
+        <MyComponent title={'title 3'}/>
     </>
   )
 }
 
-export default App
+export default App;
