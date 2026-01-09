@@ -1,15 +1,17 @@
 
 import './FamilyComponent.css';
-import {coursesAndDurationArray} from "../../data/simpsonsArray.ts";
-import type {ICourse} from "../../models/ICharacter.ts";
 import CharacterComponent from "../character-component/CharacterComponent.tsx";
+import {simpsons} from "../../data/simpsonsArray.ts";
+import type {ICharacter} from "../../models/ICharacter.ts";
 
 const FamilyComponent = () => {
     return (
             <div>
                 {
-                    coursesAndDurationArray.map((course:ICourse, index:number) => {
-                        return <CharacterComponent course={course} key={index}/>;
+                    simpsons.map((character:ICharacter, index:number) => {
+                        return <CharacterComponent character={character} key={index}>
+                            {character.info}
+                        </CharacterComponent>;
                     })
                 }
             </div>

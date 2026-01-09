@@ -6,9 +6,7 @@ const App = () => {
 
   return (
     <>
-      <FamilyComponent>
-
-      </FamilyComponent>
+      <FamilyComponent/>
     </>
   )
 }

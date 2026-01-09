@@ -1,6 +1,6 @@
 import type {ICharacter} from "../models/ICharacter.ts";
 
-let simpsons: ICharacter[] = [
+export const simpsons: ICharacter[] = [
     {
         name: 'Bart',
         surname: 'Simpson',

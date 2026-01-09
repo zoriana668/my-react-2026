@@ -10,19 +10,15 @@ type MyPropsType = {
 
 const CharacterComponent:FC<MyPropsType> = ({character, children}) => {
     return (
-        <div className='bg-orange-500 mb-5'>
-            <h2>Character name - {character.name}</h2>
-            <p>Character surname - {character.surname}</p>
+        <div className='character-block bg-orange-500'>
+            <h2 className='text-center uppercase'>{character.name} {character.surname}</h2>
+            <img src={character.photo} alt={character.name}/>
             <p>Character age - {character.age}</p>
-            <p>Character infro - {character.info}</p>
-            <img src={character.photo}/>
+
+            <p>Character info - {children}</p>
+
         </div>
     );
 };
 
 export default CharacterComponent;
-
-
-age: number,
-    info: string,
-    photo: string
