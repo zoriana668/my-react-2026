@@ -1,18 +1,28 @@
 
 import './CharacterComponent.css';
-import type {FC} from "react";
+import type {FC, ReactNode} from "react";
+import type {ICharacter} from "../../models/ICharacter.ts";
 
 type MyPropsType = {
-    course: ICourse;
+    character: ICharacter;
+    children: ReactNode;
 }
 
-const CharacterComponent:FC<MyPropsType> = ({course}) => {
+const CharacterComponent:FC<MyPropsType> = ({character, children}) => {
     return (
         <div className='bg-orange-500 mb-5'>
-            <h2>Course name - {course.title}</h2>
-            <p>Course duration - {course.monthDuration}</p>
+            <h2>Character name - {character.name}</h2>
+            <p>Character surname - {character.surname}</p>
+            <p>Character age - {character.age}</p>
+            <p>Character infro - {character.info}</p>
+            <img src={character.photo}/>
         </div>
     );
 };
 
 export default CharacterComponent;
+
+
+age: number,
+    info: string,
+    photo: string
