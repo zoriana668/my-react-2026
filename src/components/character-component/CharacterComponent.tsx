@@ -1,13 +1,12 @@
 
-import './CourseComponent.css';
+import './CharacterComponent.css';
 import type {FC} from "react";
-import type {ICourse} from "../../models/ICourse.ts";
 
 type MyPropsType = {
     course: ICourse;
 }
 
-const CourseComponent:FC<MyPropsType> = ({course}) => {
+const CharacterComponent:FC<MyPropsType> = ({course}) => {
     return (
         <div className='bg-orange-500 mb-5'>
             <h2>Course name - {course.title}</h2>
@@ -16,4 +15,4 @@ const CourseComponent:FC<MyPropsType> = ({course}) => {
     );
 };
 
-export default CourseComponent;
+export default CharacterComponent;
