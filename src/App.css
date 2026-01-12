@@ -6,12 +6,3 @@ body {
   align-items: center;
 }
 
-li {
-  font-size: 27px;
-  color: #213547;
-  background-color: orange;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  padding: 5px 10px;
-}
-
