@@ -1,19 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {useState} from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
 
-  return (
-    <>
 
-      <h1>
-          Vite + React
-      </h1>
-    </>
-  )
-}
+  let [counter, setCounter] = useState<number>(0);
+  console.log('mount');
 
-export default App
+    return (
+        <div>
+
+          <h2>{counter}</h2>
+          <button onClick={() => {
+            setCounter(++counter);
+            console.log(counter);
+          }}>increment</button>
+
+          <button onClick={() => {
+            setCounter(prevState => {
+              return --prevState
+            })
+          }}>decrement</button>
+        </div>
+    );
+};
+
+export default App;
