@@ -9,7 +9,7 @@ type TodoPropType = {
 const ToDoComponent:FC<TodoPropType> = (todo) => {
     return (
         <div>
-
+            <div key={todo.id}>{todo.title}</div>
         </div>
     );
 };
