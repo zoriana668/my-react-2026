@@ -1,5 +1,10 @@
+import type {ITodo} from "../../models/ITodo.ts";
+import {useState} from "react";
 
 const ToDoComponents = () => {
+    const [todoArray, setTodo] = useState<ITodo>([]);
+
+
     return (
         <div>
 
