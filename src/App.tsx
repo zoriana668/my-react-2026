@@ -1,9 +1,9 @@
-import ToDoComponents from "./components/To-do-Components/ToDoComponents.tsx";
+import PostsComponent from "./components/PostsComponent/PostsComponent.tsx";
 
 const App = () => {
     return (
         <div>
-            <ToDoComponents/>
+            <PostsComponent/>
         </div>
     );
 };
