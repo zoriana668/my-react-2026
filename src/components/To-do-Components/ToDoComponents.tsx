@@ -1,17 +1,19 @@
-// import type {ITodo} from "../../models/ITodo.ts";
-// import {useState} from "react";
+import type {ITodo} from "../../models/ITodo.ts";
+import {useEffect, useState} from "react";
 
 import {getTodos} from "../../service/api.service.ts";
 
 const ToDoComponents = () => {
-    // const [todoArray, setTodo] = useState<ITodo>([]);
+    const [todoArray, setTodo] = useState<ITodo>([]);
 
-    getTodos()
+    useEffect((
+
+    ))
 
 
     return (
         <div>
-
+            {/*todoArray.map(*/}
         </div>
     );
 };
