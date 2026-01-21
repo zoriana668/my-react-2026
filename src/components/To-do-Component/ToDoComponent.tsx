@@ -6,10 +6,10 @@ type TodoPropType = {
     todo: ITodo
 }
 
-const ToDoComponent:FC<TodoPropType> = (todo) => {
+const ToDoComponent:FC<TodoPropType> = (item) => {
     return (
         <div>
-            <div key={todo.id}>{todo.title}</div>
+            <div key={item.id}>{item.title}</div>
         </div>
     );
 };
