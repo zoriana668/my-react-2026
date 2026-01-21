@@ -9,7 +9,7 @@ type TodoPropType = {
 const ToDoComponent:FC<TodoPropType> = ({item}) => {
     return (
         <div>
-            <div key={item.id}>{item.title}</div>
+            <div key={item.id}>{`ID -${item.id} Title - ${item.title}`}</div>
         </div>
     );
 };
