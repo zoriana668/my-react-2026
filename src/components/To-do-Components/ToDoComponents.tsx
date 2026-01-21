@@ -4,6 +4,7 @@ import {useState} from "react";
 const ToDoComponents = () => {
     const [todoArray, setTodo] = useState<ITodo>([]);
 
+    getTodos()
 
     return (
         <div>
