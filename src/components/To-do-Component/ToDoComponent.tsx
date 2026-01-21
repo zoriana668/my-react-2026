@@ -3,10 +3,10 @@ import type {FC} from "react";
 
 
 type TodoPropType = {
-    todo: ITodo
+    item: ITodo
 }
 
-const ToDoComponent:FC<TodoPropType> = (item) => {
+const ToDoComponent:FC<TodoPropType> = ({item}) => {
     return (
         <div>
             <div key={item.id}>{item.title}</div>
