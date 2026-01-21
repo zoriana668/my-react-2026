@@ -5,3 +5,8 @@ const getTodos = async():Promise<ITodo[]> => {
         .then(value => value.json())
     return todos;
 }
+
+
+export {
+    getTodos
+}
