@@ -18,7 +18,9 @@ const PostsComponent = () => {
 
     return (
         <div>
-            postsArray.map(post => (<PostComponent key={post.id} item={post}/>))
+            {
+                postsArray.map(post => (<PostComponent key={post.id} item={post}/>))
+            }
         </div>
     );
 };
