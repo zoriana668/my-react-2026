@@ -1,9 +1,10 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {getPosts} from "../../service/api.service.ts";
+import type {IPost} from "../../models/IPost.ts";
 
 const PostsComponent = () => {
 
-    const [postsArray, setPost] = useEffect([]);
+    const [postsArray, setPost] = useState<IPost[]>([]);
 
     useEffect(() => {
         getPosts()
@@ -16,7 +17,7 @@ const PostsComponent = () => {
 
     return (
         <div>
-            postsArray.map()
+            postsArray.map(item )
         </div>
     );
 };
