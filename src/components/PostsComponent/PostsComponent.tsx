@@ -18,7 +18,7 @@ const PostsComponent = () => {
 
     return (
         <div>
-            postsArray.map(post => <PostComponent key={item.id} post={item}/>)
+            postsArray.map((post) => <PostComponent key={post.id} item={post}/>)
         </div>
     );
 };
