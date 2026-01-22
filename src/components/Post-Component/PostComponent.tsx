@@ -7,7 +7,6 @@ type PostPropType = {
 
 const PostComponent:FC<PostPropType> = ({item}) => {
 
-
     return (
         <div>
             {
