@@ -7,14 +7,16 @@ const PostsComponent = () => {
 
     useEffect(() => {
         getPosts()
-            .then(response)
-            setPost(response);
+            .then(response => {
+                setPost(response)
+            });
+
     }, []);
 
 
     return (
         <div>
-
+            postsArray.map()
         </div>
     );
 };
