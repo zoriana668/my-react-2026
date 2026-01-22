@@ -1,6 +1,8 @@
+import type {IPost} from "../../models/IPost.ts";
+
 const PostComponent = () => {
 
-    const PostPropType = {
+    type PostPropType = {
         post: IPost
     }
 
