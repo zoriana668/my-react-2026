@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {getPosts} from "../../service/api.service.ts";
 import type {IPost} from "../../models/IPost.ts";
+import PostComponent from "../Post-Component/PostComponent.tsx";
 
 const PostsComponent = () => {
 
@@ -17,7 +18,7 @@ const PostsComponent = () => {
 
     return (
         <div>
-            postsArray.map(item )
+            postsArray.map(item => <PostComponent></PostComponent>)
         </div>
     );
 };
