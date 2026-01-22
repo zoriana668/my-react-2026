@@ -11,7 +11,9 @@ const PostComponent:FC<PostPropType> = ({item}) => {
     return (
         <div>
             {
-                <div key={post.id}>{`Post title - ${post.title}`}</div>
+                <div className='mb-10 p-7 bg-green-800' key={item.id}>
+                    {`Post ID - ${item.id} Post title - ${item.title}`}</div>
+
             }
         </div>
     );
