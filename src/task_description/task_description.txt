@@ -46,7 +46,7 @@ https://jsonplaceholder.typicode.com/comments – тут масив даних.�
 
 #q2faxfR
 
-Те саме, що і попередні завдання, але дані отримати з апі – https://dummyjson.com
+Те саме, що і попередні завдання, але дані отримати з апі – https://dummyjson.com/posts
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -54,4 +54,4 @@ https://jsonplaceholder.typicode.com/comments – тут масив даних.�
 
 #hQj9gOH
 
-**Те саме що і попередні завдання, але данні отримати з апі – https://dummyjson.com/products
+**Те саме що і попередні завдання, але дані отримати з апі – https://dummyjson.com/products
