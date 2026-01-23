@@ -1,22 +1,24 @@
 import {useEffect, useState} from "react";
 import type {IPosts} from "../../models/IPosts.ts";
-import {getRecipe} from "../../service/api.service.ts";
 import PostComponent from "../Post-Component/Post-Component.tsx";
+import {getPosts} from "../../service/api.service.ts";
 
 const PostsComponent = () => {
     const [postsArray, setPost] = useState<IPosts[]>([])
     useEffect(() => {
-        getPosts()
-            .then(result => {
-                setPost(result);
-            })
+        async function fetchPosts() {
+            const allPosts = await getPosts()
+            setPost(allPosts)
+        }
+
+        fetchPosts()
     }, []);
 
 
     return (
         <div>
             {
-                postsArray.map((recipe) => (<PostComponent key={recipe.id} item={recipe}/>))
+                postsArray.map((post) => (<PostComponent key={post.id} item={post}/>))
             }
         </div>
     );

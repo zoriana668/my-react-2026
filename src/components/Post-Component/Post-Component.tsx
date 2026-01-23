@@ -5,14 +5,13 @@ type PostPropType = {
     item: IPosts
 }
 
-const PostComponent:FC<PostPropType> = ({item: {id, name, difficulty, cuisine, ingredients}}) => {
+const PostComponent:FC<PostPropType> = ({item: {title, views, body}}) => {
     return (
         <div>
-            <div key={id}>
-                <h3>{name}</h3>
-                <p>{difficulty}</p>
-                <p>{cuisine}</p>
-                <div>{ingredients}</div>
+            <div>
+                <h3>{title}</h3>
+                <p>{views}</p>
+                <div>{body}</div>
             </div>
         </div>
     );
