@@ -7,8 +7,8 @@ const RecipesComponent = () => {
     const [recipesArray, setRecipe] = useState<IRecipe>([])
     useEffect(() => {
         getRecipe()
-            .then(response => {
-                setRecipe(response);
+            .then(result => {
+                setRecipe(result);
             })
     }, []);
 
