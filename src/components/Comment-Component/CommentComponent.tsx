@@ -9,7 +9,7 @@ const CommentComponent:FC<CommentPropType> = ({item}) => {
     return (
         <div>
             {
-                <div>{item.name}</div>
+                <div key={item.id}>{item.name}</div>
             }
         </div>
     );
