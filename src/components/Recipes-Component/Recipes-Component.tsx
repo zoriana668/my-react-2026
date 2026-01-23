@@ -16,7 +16,7 @@ const RecipesComponent = () => {
     return (
         <div>
             {
-                recipesArray.map((recipe) => (<RecipeComponent key={recipe.id}  recipe={item}/>))
+                recipesArray.map((recipe) => (<RecipeComponent key={recipe.id}  item={recipe}/>))
             }
         </div>
     );
