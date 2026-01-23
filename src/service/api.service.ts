@@ -1,14 +1,14 @@
-import type {IRecipe} from "../models/IRecipe.ts";
+import type {IPosts} from "../models/IPosts.ts";
 
-const recipeAPI = import.meta.env.VITE_API_RECIPES;
+const postAPI = import.meta.env.VITE_API_POSTS;
 
 
-const getRecipe = async (): Promise<IRecipe[]> => {
-    const response = await fetch(recipeAPI)
+const getPosts = async (): Promise<IPosts[]> => {
+    const response = await fetch(postAPI)
     const data = await response.json();
     return data;
 }
 
 export {
-    getRecipe
+    getPosts
 }
