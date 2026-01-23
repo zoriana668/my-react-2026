@@ -1,0 +1,28 @@
+
+
+
+.comment-block {
+    width: 400px;
+    height: 220px;
+    background-color: #f6a428;
+    padding: 10px;
+    border-radius: 5px;
+    color: #1a1a1a;
+}
+
+.comment-email {
+    font-weight: bold;
+}
+
+.comment-email,
+.comment-name {
+    text-align: center;
+}
+
+.comment-name {
+    margin-bottom: 20px;
+}
+
+.comment-info {
+    text-align: justify;
+}

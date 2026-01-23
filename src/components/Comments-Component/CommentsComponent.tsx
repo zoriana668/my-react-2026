@@ -3,6 +3,8 @@ import type {IComment} from "../../models/IComment.ts";
 import {getComments} from "../../service/api.service.ts";
 import CommentComponent from "../Comment-Component/CommentComponent.tsx";
 
+import './CommentsComponent.css'
+
 const CommentsComponent = () => {
     const [commentsArray, setComment] = useState<IComment[]>([]);
     useEffect(() => {
@@ -13,7 +15,7 @@ const CommentsComponent = () => {
     })
 
     return (
-        <div>
+        <div className='comments'>
             {
                 commentsArray.map((comment) => (<CommentComponent key={comment.id} item={comment}/>))
             }
