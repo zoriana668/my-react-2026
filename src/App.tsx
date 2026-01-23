@@ -1,9 +1,9 @@
-import CommentsComponent from "./components/Comments-Component/CommentsComponent.tsx";
+import RecipesComponent from "./components/Recipes-Component/Recipes-Component.tsx";
 
 const App = () => {
     return (
         <div>
-            <CommentsComponent/>
+            <RecipesComponent/>
         </div>
     );
 };
