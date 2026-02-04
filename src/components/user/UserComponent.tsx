@@ -1,15 +1,23 @@
 import type {FC} from "react";
+import {Link, useNavigate} from "react-router-dom";
+import type {IUser} from "../../models/IUser.ts";
 
 type UserTypeProps = {
     item: IUser
 }
 
 const UserComponent:FC<UserTypeProps> = ({item}) => {
+
+    const navigate = useNavigate();
+    const handleOnClick = () => {
+        navigate('details', {state: item});
+    };
+
     return (
         <div>
-            {
-                item.username
-            }
+            <Link to={'details'} state={item}>{item.username}</Link>
+
+            <button onClick={handleOnClick}>go to details</button>
         </div>
     );
 };
