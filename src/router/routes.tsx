@@ -6,6 +6,10 @@ import PostsPage from "../pages/PostsPage.tsx";
 import CommentsPage from "../pages/CommentsPage.tsx";
 import ProductsPage from "../pages/ProductsPage.tsx";
 
+
+
+// browser router option -----
+
 export const routes = createBrowserRouter([
     {path: '', element: <Layout/>, children: [
 
