@@ -1,4 +1,4 @@
-import {createBrowserRouter} from "react-router-dom";
+import {BrowserRouter, createBrowserRouter, Route, Routes} from "react-router-dom";
 import Layout from "../layouts/Layout.tsx";
 import HomePage from "../pages/HomePage.tsx";
 import UsersPage from "../pages/UsersPage.tsx";
@@ -8,7 +8,7 @@ import ProductsPage from "../pages/ProductsPage.tsx";
 
 
 
-// browser router option -----
+// router object -----
 
 export const routes = createBrowserRouter([
     {path: '', element: <Layout/>, children: [
@@ -20,3 +20,21 @@ export const routes = createBrowserRouter([
             {path: 'products', element: <ProductsPage/>}
         ]}
 ])
+
+
+
+//  browser router  ----
+
+// export const routes2 = ([
+//     <BrowserRouter>
+//         <Routes>
+//             <Route path={'/'} element={<Layout/>}>
+//                 <Route path={'/'} element={<HomePage/>}/>
+//                 <Route path={'users'} element={<UsersPage/>}/>
+//                 <Route path={'posts'} element={<PostsPage/>}/>
+//                 <Route path={'comments'} element={<CommentsPage/>}/>
+//                 <Route path={'products'} element={<ProductsPage/>}/>
+//             </Route>
+//         </Routes>
+//     </BrowserRouter>
+// ])
