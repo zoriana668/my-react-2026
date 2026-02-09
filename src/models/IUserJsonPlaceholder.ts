@@ -1,5 +1,5 @@
 // User
-export interface IUser {
+export interface IUserJsonPlaceholder {
     id: number;
     name: string;
     username: string;
@@ -31,4 +31,3 @@ export interface ICompany {
     catchPhrase: string;
     bs: string;
 }
-
