@@ -1,5 +1,13 @@
 // User
-export interface IUser {
+
+export interface UsersResponseDummyJson {
+    users: IUserDummyJson[];
+    total: number;
+    skip: number;
+    limit: number;
+}
+
+export interface IUserDummyJson {
     id: number;
     firstName: string;
     lastName: string;

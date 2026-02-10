@@ -1,0 +1,13 @@
+
+
+.user-block {
+    width: 300px;
+    font-family: "Roboto Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    margin-bottom: 6px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #7bdbfd;
+    border-radius: 4px;
+
+}

@@ -1,4 +1,4 @@
-export interface IPost {
+export interface IPostJsonPlaceholder {
     userId: number;
     id: number;
     title: string;
