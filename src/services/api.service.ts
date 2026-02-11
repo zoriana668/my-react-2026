@@ -1,6 +1,7 @@
 import type {IUserJsonPlaceholder} from '../models/IUserJsonPlaceholder';
 import type {IUserDummyJson, UsersResponseDummyJson} from "../models/IUserDummyJson.ts";
 import type {IPostJsonPlaceholder} from "../models/IPostJsonPlaceholder.ts";
+import type {IPostDummyJson, PostsResponseDummyJson} from "../models/IPostDummyJson.ts";
 
 
 export const userService = {
@@ -20,5 +21,10 @@ export const postService = {
     getPostsFromJsonPlaceholder: async(): Promise<IPostJsonPlaceholder[]> => {
         return await fetch('https://jsonplaceholder.typicode.com/posts')
             .then(res => res.json())
+    },
+    getPostsFromDummyJson: async(): Promise<IPostDummyJson[]> => {
+        return await fetch('https://dummyjson.com/posts')
+            .then(res => res.json())
+            .then((data:PostsResponseDummyJson) => data.posts)
     }
 }

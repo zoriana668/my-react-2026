@@ -1,5 +1,13 @@
+// Post Response
+export interface PostsResponseDummyJson {
+    posts: IPostDummyJson[];
+    total: number;
+    skip: number;
+    limit: number;
+}
+
 // Post
-export interface IPost {
+export interface IPostDummyJson {
     id: number;
     title: string;
     body: string;
