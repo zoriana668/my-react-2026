@@ -2,6 +2,7 @@ import type {IUserJsonPlaceholder} from '../models/IUserJsonPlaceholder';
 import type {IUserDummyJson, UsersResponseDummyJson} from "../models/IUserDummyJson.ts";
 import type {IPostJsonPlaceholder} from "../models/IPostJsonPlaceholder.ts";
 import type {IPostDummyJson, PostsResponseDummyJson} from "../models/IPostDummyJson.ts";
+import type {ICommentJsonPlaceholder} from "../models/ICommentsJsonPlaceholder.ts";
 
 
 export const userService = {
@@ -26,5 +27,12 @@ export const postService = {
         return await fetch('https://dummyjson.com/posts')
             .then(res => res.json())
             .then((data:PostsResponseDummyJson) => data.posts)
+    }
+}
+
+export const commentsService = {
+    getCommentsFromJsonPlaceholder: async (): Promise<ICommentJsonPlaceholder[]> => {
+        return await fetch('https://jsonplaceholder.typicode.com/comments')
+            .then(res => res.json())
     }
 }

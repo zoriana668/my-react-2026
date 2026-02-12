@@ -8,6 +8,7 @@ import UsersDummyJsonPage from "../pages/UsersDummyJsonPage/UsersDummyJsonPage.t
 import PostsJsonPlaceholderPage from "../pages/PostsJsonPlaceholderPage/PostsJsonPlaceholderPage.tsx";
 import PostsDummyJsonPage from "../pages/PostsDummyJsonPage/PostsDummyJsonPage.tsx";
 import CommentsJsonPlaceholderPage from "../pages/CommentsJsonPlaceholderPage/CommentsJsonPlaceholderPage.tsx";
+import CommentsDummyJsonPage from "../pages/CommentsDummyJsonPage/CommentsDummyJsonPage.tsx";
 
 
 
@@ -25,8 +26,9 @@ export const routes = createBrowserRouter([
                     {path: 'dummyjson', element: <PostsDummyJsonPage/>}
                 ]},
             {path: 'comments', element: <CommentsPage/>, children: [
-                    {path: 'jsonplaceholder', element: <CommentsJsonPlaceholderPage/>}
-                ]}
+                    {path: 'jsonplaceholder', element: <CommentsJsonPlaceholderPage/>},
+                    {path: 'dummyJson', element: <CommentsDummyJsonPage/>}
+                ]},
 
         ]
     }
