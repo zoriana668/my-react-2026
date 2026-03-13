@@ -1,3 +1,6 @@
+
+import './UserComponent.css';
+
 import type {IUser} from "../../models/IUser.ts";
 
 
@@ -8,8 +11,8 @@ interface UserComponentProps {
 const UserComponent = ({userProp}: UserComponentProps) => {
 
     return (
-        <div>
-            {userProp.id} - {userProp.username}
+        <div className='user-component-item'>
+            {userProp.id}. - {userProp.username} - {userProp.email}
         </div>
     );
 };
