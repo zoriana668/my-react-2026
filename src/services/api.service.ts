@@ -3,7 +3,7 @@ import axios from 'axios'
 import type {ICar} from "../models/ICar.ts";
 
 export const axiosInstance = axios.create({
-    baseURL: 'http://185.69.152.209/carsAPI/v1/doc'
+    baseURL: 'http://owu.linkpc.net/carsAPI/v1'
 });
 
 export const getAllCars = async ():Promise<ICar[]> => {

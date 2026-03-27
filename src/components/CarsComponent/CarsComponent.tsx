@@ -1,7 +1,11 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {getAllCars} from "../../services/api.service.ts";
+import type {ICar} from "../../models/ICar.ts";
 
 const CarsComponent = () => {
+
+    const [cars, setCars] = useState<ICar[]>([]);
+
     useEffect(() => {
         getAllCars()
             .then(cars => console.log(cars))
@@ -11,7 +15,7 @@ const CarsComponent = () => {
 
     return (
         <div>
-
+            cars.map(car => )
         </div>
     );
 };
