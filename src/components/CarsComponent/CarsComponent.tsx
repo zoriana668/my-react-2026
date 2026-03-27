@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {getAllCars} from "../../services/api.service.ts";
 import type {ICar} from "../../models/ICar.ts";
+import CarComponent from "../CarComponent/CarComponent.tsx";
 
 const CarsComponent = () => {
 
@@ -15,7 +16,9 @@ const CarsComponent = () => {
 
     return (
         <div>
-            cars.map(car => )
+            {
+                cars.map((car)=>  <CarComponent key={car.id} carProp={car}/>)
+            }
         </div>
     );
 };
