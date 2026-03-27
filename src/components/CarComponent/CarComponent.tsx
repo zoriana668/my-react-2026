@@ -1,8 +1,11 @@
+import type {ICar} from "../../models/ICar.ts";
+
+type CarPropType = {
+    item: ICar
+}
+
 const CarComponent = () => {
 
-    export const carProp {
-
-    }
 
     return (
         <div>

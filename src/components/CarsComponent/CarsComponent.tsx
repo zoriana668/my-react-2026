@@ -17,7 +17,7 @@ const CarsComponent = () => {
     return (
         <div>
             {
-                cars.map((car)=>  <CarComponent key={car.id} carProp={car}/>)
+                cars.map((car)=>  <CarComponent key={car.id} item={car}/>)
             }
         </div>
     );
