@@ -1,12 +1,10 @@
 
 import './App.css'
-import CarsComponent from "./components/CarsComponent/CarsComponent.tsx";
 
 function App() {
 
   return (
     <>
-    <CarsComponent/>
     </>
   )
 }

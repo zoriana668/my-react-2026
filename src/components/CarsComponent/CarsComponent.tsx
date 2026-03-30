@@ -9,8 +9,9 @@ const CarsComponent = () => {
 
     useEffect(() => {
         getAllCars()
-            .then(cars => console.log(cars))
-            .catch(error => console.log(error))
+            .then(cars => {
+                setCars(cars);
+            })
     }, []);
 
 

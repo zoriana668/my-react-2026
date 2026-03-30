@@ -10,7 +10,7 @@ const CarComponent:FC<CarPropType> = ({item}) => {
 
     return (
         <div>
-            <div>{item.id} {item.brand} - {item.price}</div>
+            <div>{item.id} - {item.brand} - {item.price} - {item.year}</div>
         </div>
     );
 };
