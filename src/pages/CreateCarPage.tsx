@@ -1,10 +1,10 @@
-import FormComponent from "../components/FormComponent/FormComponent.tsx";
+import CreateFormComponent from "../components/CreateFormComponent/CreateFormComponent.tsx";
 
 const CreateCarPage = () => {
     return (
         <div>
             CreateCarPage
-            <FormComponent/>
+            <CreateFormComponent/>
         </div>
     );
 };

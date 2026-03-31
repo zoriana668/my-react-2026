@@ -1,18 +1,14 @@
 import {useForm} from "react-hook-form";
 
-
-
 interface IFormProps {
     brand: string,
     price: number,
     year: number
 }
 
-
-const FormComponent = () => {
+const CreateFormComponent = () => {
 
     const {handleSubmit, register} = useForm<IFormProps>();
-    // console.log(useForm1);
 
     const customHandler = (formDataProps:IFormProps) => {
         console.log(formDataProps)
@@ -30,4 +26,4 @@ const FormComponent = () => {
     );
 };
 
-export default FormComponent;
+export default CreateFormComponent;
