@@ -1,4 +1,6 @@
 import {useForm} from "react-hook-form";
+import {carValidator} from "../../validators/car.validator.ts";
+import {joiResolver} from "@hookform/resolvers/joi";
 
 interface IFormProps {
     brand: string,
@@ -8,7 +10,7 @@ interface IFormProps {
 
 const CreateFormComponent = () => {
 
-    const {handleSubmit, register} = useForm<IFormProps>();
+    const {handleSubmit, register, formState: {errors, isValid}} = useForm<IFormProps>({mode: 'all', resolver: joiResolver(carValidator)});
 
     const customHandler = (formDataProps:IFormProps) => {
         console.log(formDataProps)
@@ -20,7 +22,7 @@ const CreateFormComponent = () => {
                 <input type='text' {...register('brand')}/>
                 <input type='number' {...register('price')}/>
                 <input type='number' {...register('year')}/>
-                <button>Create</button>
+                <button disabled={!isValid}>Create</button>
             </form>
         </div>
     );
