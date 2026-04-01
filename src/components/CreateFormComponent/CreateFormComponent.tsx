@@ -32,7 +32,10 @@ const CreateFormComponent = () => {
                             Type a brand
                         </label>
                         <input type='text' id='brand' className={'input-field input-brand'} {...register('brand')}/>
-                        {errors.brand && <div className={'error-message'}>{errors.brand.message}</div>}
+
+                        <div className="error-message">
+                            {errors.brand?.message}
+                        </div>
                     </div>
 
 
@@ -41,7 +44,10 @@ const CreateFormComponent = () => {
                             Type a price
                         </label>
                         <input type='number' id='price' className={'input-field input-price'} {...register('price')}/>
-                        {errors.price && <div className={'error-message'}>{errors.price.message}</div>}
+
+                        <div className="error-message">
+                            {errors.price?.message}
+                        </div>
                     </div>
 
                     <div className={'input-wrapper'}>
