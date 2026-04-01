@@ -1,8 +1,4 @@
 
-* {
-    box-sizing: border-box;
-}
-
 
 .form-wrapper {
     width: 700px;
@@ -27,15 +23,26 @@
 
 .form-heading {
     text-align: center;
-    font-family: "Roboto Thin", sans-serif;
     text-transform: uppercase;
     font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
 
 }
 
 .input-field {
-    width: 320px;
-    height: 30px;
+    width: 340px;
+    height: 35px;
 
     border: none;
     border-radius: 3px;
@@ -44,10 +51,16 @@
     padding: 3px 10px;
 }
 
+.error-message {
+    font-size: 14px;
+    color: #982828;
+}
+
 .btn-create {
-    width: 155px;
-    height: 30px;
+    width: 175px;
+    height: 35px;
     background-color: #379702;
+    color: #1d5500;
     border-radius: 3px;
 
     border: none;
@@ -62,6 +75,7 @@
 
 .btn-create:disabled {
     background-color: #ff4242;
+    color: #781414;
 
 }
 
