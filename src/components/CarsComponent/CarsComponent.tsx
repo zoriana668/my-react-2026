@@ -8,9 +8,11 @@ const CarsComponent = () => {
     const [cars, setCars] = useState<ICar[]>([]);
 
     useEffect(() => {
+        console.log('useEffect START');
         getAllCars()
             .then(cars => {
                 setCars(cars);
+                // console.log(cars);
             })
     }, []);
 

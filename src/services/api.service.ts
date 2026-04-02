@@ -25,17 +25,3 @@ export const addCar = async (car: ICar) => {
     await axiosInstance.post('/cars', car);
 }
 
-
-
-
-// export const getAllUsers = async ():Promise<IUser[]> => {
-//     const {data} = await axiosInstance.get<IUser[]>('/users')
-//     return data;
-// }
-//
-//
-// export const saveUser = async (user: IUser):Promise<IUser> => {
-//     const {data} = await axiosInstance.post<IUser>('/users', user);
-//
-//     return data;
-// }

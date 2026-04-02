@@ -5,6 +5,8 @@ import {joiResolver} from "@hookform/resolvers/joi";
 import './CreateFormComponent.css';
 import '../Menu/General.css';
 
+import {addCar} from "../../services/api.service.ts";
+
 interface IFormProps {
     brand: string,
     price: number,
@@ -16,11 +18,11 @@ const CreateFormComponent = () => {
     const {handleSubmit, register, formState: {errors, isValid}} = useForm<IFormProps>({mode: 'all', resolver: joiResolver(carValidator)});
 
     const customHandler = (formDataProps:IFormProps) => {
-        console.log(formDataProps)
+        // console.log(formDataProps)
+        addCar(formDataProps);
     }
 
     return (
-
         <div className={'base-container'}>
             <div className={'form-wrapper'}>
 
@@ -38,12 +40,11 @@ const CreateFormComponent = () => {
                         </div>
                     </div>
 
-
                     <div className={'input-wrapper'}>
                         <label htmlFor={'price'}>
                             Type a price
                         </label>
-                        <input type='number' id='price' className={'input-field input-price'} {...register('price')}/>
+                        <input type='number' id='price' className={'input-field input-price'} {...register('price', {valueAsNumber: true})}/>
 
                         <div className="error-message">
                             {errors.price?.message}
@@ -54,7 +55,7 @@ const CreateFormComponent = () => {
                         <label htmlFor={'year'}>
                             Type a year
                         </label>
-                        <input type='number' id='year' className={'input-field input-year'} {...register('year')}/>
+                        <input type='number' id='year' className={'input-field input-year'} {...register('year', {valueAsNumber: true})}/>
                         {errors.year && <div className={'error-message'}>{errors.year.message}</div>}
                     </div>
 
