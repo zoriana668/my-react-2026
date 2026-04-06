@@ -5,7 +5,7 @@ export const carValidator = Joi.object({
                      .min(1)
                      .max(20)
                      .required().messages({
-            'string.pattern.base': "Brand name must consists of only characters"
+            'string.pattern.base': 'Brand name must consists of only characters'
         }),
 
     price: Joi.number().min(0).max(1000000).required().messages({
