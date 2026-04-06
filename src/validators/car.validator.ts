@@ -12,7 +12,7 @@ export const carValidator = Joi.object({
         'number.min': 'Price must be greater than 0',
         'number.max': 'Price must be less than 1000000'
     }),
-    year: Joi.number().min(1990).max(2026).required().messages({
+    year: Joi.number().min(1990).max(new Date().getFullYear()).required().messages({
         'number.min': 'Year must be greater than 1990',
         'number.max': 'Year must be less than 2026'
     })
