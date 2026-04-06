@@ -1,7 +1,7 @@
 import Joi from "joi";
 
 export const carValidator = Joi.object({
-    brand: Joi.string().pattern(/^[a-zA-Zа-яА-ЯёЁіІїЇєЄҐґ]+$/)
+    brand: Joi.string().pattern(/^[a-zA-Zа-яА-ЯіІїЇєЄҐґ]+( [a-zA-Zа-яА-ЯіІїЇєЄҐґ]+)*$/)
                      .min(1)
                      .max(20)
                      .required().messages({
