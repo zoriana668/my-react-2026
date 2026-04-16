@@ -12,7 +12,6 @@ const CarsComponent = () => {
         getAllCars()
             .then(cars => {
                 setCars(cars);
-                // console.log(cars);
             })
     }, []);
 
